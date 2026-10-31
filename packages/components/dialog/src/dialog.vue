@@ -19,7 +19,7 @@
           role="dialog"
           aria-modal="true"
           :aria-label="title || undefined"
-          :aria-labelledby="!title ? titleId : undefined"
+          :aria-labelledby="!title && $slots.header && !$slots.title ? titleId : undefined"
           :aria-describedby="bodyId"
           :class="[
             `${ns.namespace.value}-overlay-dialog`,
