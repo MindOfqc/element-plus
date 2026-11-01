@@ -832,7 +832,7 @@ describe('Drawer', () => {
       )
       await nextTick()
       const drawerDialog = wrapper.find('[role="dialog"]')
-      expect(drawerDialog.attributes()['aria-labelledby']).toBeFalsy()
+      expect(drawerDialog.attributes()).not.toHaveProperty('aria-labelledby')
     })
   })
 })
